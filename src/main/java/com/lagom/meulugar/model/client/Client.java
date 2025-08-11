@@ -1,6 +1,7 @@
 package com.lagom.meulugar.model.client;
 
 import jakarta.persistence.*;
+import jakarta.validation.constraints.Email;
 import jakarta.validation.constraints.NotNull;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -22,10 +23,13 @@ public class Client {
     @Column(nullable = false)
     private String name;
 
+    @Email
     private String email;
 
     private String phone;
 
-    private String cpf;
+    private String password;
+
+    private String identifier;
 
 }
