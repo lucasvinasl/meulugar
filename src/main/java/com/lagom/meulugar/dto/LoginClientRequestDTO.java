@@ -5,7 +5,7 @@ import lombok.Data;
 import org.hibernate.validator.constraints.Length;
 
 @Data
-public class ClientLoginRequestDTO {
+public class LoginClientRequestDTO {
     @Email(message = "O email deve ter um formato válido")
     private String email;
 

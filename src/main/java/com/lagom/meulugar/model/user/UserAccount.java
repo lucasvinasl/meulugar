@@ -1,6 +1,7 @@
 package com.lagom.meulugar.model.user;
 
-import com.lagom.meulugar.model.profile.ProfileEnum;
+import com.lagom.meulugar.model.company.Company;
+import com.lagom.meulugar.model.profile.RoleEnum;
 import jakarta.persistence.*;
 import jakarta.validation.constraints.NotNull;
 import lombok.AllArgsConstructor;
@@ -37,6 +38,9 @@ public class UserAccount {
 
     @NotNull
     @Enumerated(EnumType.STRING)
-    private ProfileEnum profileEnum;
+    private RoleEnum roleEnum;
+
+    @ManyToOne(cascade = CascadeType.ALL)
+    private Company company;
 
 }

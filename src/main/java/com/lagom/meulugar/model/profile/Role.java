@@ -12,7 +12,7 @@ import lombok.Setter;
 @Setter
 @AllArgsConstructor
 @NoArgsConstructor
-public class Profile {
+public class Role {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -20,6 +20,6 @@ public class Profile {
 
     @NotNull
     @Enumerated(EnumType.STRING)
-    private ProfileEnum profileEnum;
+    private RoleEnum roleEnum;
 
 }
